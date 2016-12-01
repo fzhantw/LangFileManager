@@ -35,4 +35,9 @@ class Language extends Model
     {
         return self::where('abbr', $abbr)->first();
     }
+
+    public static function getDefault()
+    {
+        return self::where('default', true)->first();
+    }
 }
